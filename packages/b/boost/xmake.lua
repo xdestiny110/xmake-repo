@@ -86,6 +86,7 @@ package("boost")
     add_configs("lzma", {description = "enable lzma for iostreams", default = false, type = "boolean"})
 
     on_load(function (package)
+
         local function get_linkname(package, libname)
             local linkname
             if package:is_plat("windows") then
